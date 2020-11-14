@@ -17,12 +17,10 @@ function createImgs() {
     var imgs = [];
 
    imgs.push(createImage('./img/gallery/test.png', ['happy']),
-        createImage('./img/gallery/test.png', ['fun']),
-        createImage('./img/gallery/test.png', ['happy']),
-        createImage('./img/gallery/test.png', ['happy']),
-        createImage('./img/gallery/test.png', ['happy']),
-         createImage('./img/gallery/test.png', ['happy']),
-        createImage('./img/gallery/test.png', ['sad']));
+        createImage('./img/gallery/test2.png', ['fun']),
+        createImage('./img/gallery/test3.png', ['happy']),
+        createImage('./img/gallery/test4.png', ['happy']),
+        createImage('./img/gallery/test5.png', ['happy']));
 
     return imgs;
 }
