@@ -22,16 +22,21 @@ a {
 
 button,
 a {
-    display: inline-block;
-    border-radius: 4px;
-    background-color: #fc6335;
+
+    justify-content: center;
+    border-radius: 20px;
+    width: 400px;
+    background-color: white;
     border: none;
-    color: #FFFFFF;
+    color: black;
     text-align: center;
-    font-size: 1.1em;
+    font-size: 1.2em;
     padding: 5px;
     transition: all 0.3s;
     cursor: pointer;
+    height: 40px;
+    margin-top:auto;
+    margin-bottom:auto;
 }
 
 
@@ -80,17 +85,19 @@ header h1 {
     200px is the minimum img size.
     each column is 200px minimum (one pic fit)  will grow to 1fr until screen width size is 400px - then two imgs can fit each 200px size. next breakpoint is 600px - 3 columns can fit.
     */
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
     /* rows - undefiend, automatically make rows as needed. with auto height-the height of the img in that row.*/
     grid-gap: 10px;
     padding: 10px;
+    padding-right: 5%;
+    padding-left: 5%;
 }
 
 .grid-container>img {
     /* display:block - img is inline by default- makes it have "line-height" applied to the bottom. display block gets rid of that line */
     display: block;
     /* width: 100% - img in grid cell will grow width to fit into changing cell size */
-    width: 100%;
+    width: 100px;
     cursor: pointer;
     border-radius: 2px;
 
@@ -118,14 +125,15 @@ header h1 {
 }
 
 .meme-container > button {
-    margin: 5px;
+    margin-left: auto;
+    margin-right: auto;
     z-index: 1;
 }
 
 .txt-editor {
     padding: 5px 10px;
 
-    
+
     margin: 5px;
 }
 
@@ -147,8 +155,24 @@ input[type=number] {
     width: 45px;
 }
 
+#maxle {
+  text-align: center;
+  margin: 0;
+}
+
 #dl {
-    margin:5px;
+    color:black;
+    background: white;
+    margin-top: 50px;
+    margin-left:auto;
+    margin-right:auto;
+    text-align: center;
+    justify-content: center;
+}
+
+#dl span{
+  justify-content: center;
+  text-align: center;
 }
 
 

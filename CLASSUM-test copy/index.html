@@ -6,9 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Meme Generator</title>
-    
-    <link rel="stylesheet" href="global.css">
-    <link rel="stylesheet" href="desktop.css">
+
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body onload="init()">
@@ -30,13 +29,20 @@
                 </button>
 
                 <div class="meme-control">
-                    <canvas class="memeCanvas">
+                    <div class="txts-list">
+                      <div class="txt-editor">
+                        <p>
+                          <input type="text" data-property="line" maxlength="14" placeholder="힘내라 애들아~ 화이팅!" oninput="editTxt(this,0)">
+                        </p>
+                      </div>
+                        <!-- js render -->
+                    </div>
+                    <canvas class="memeCanvas" width=400px; height=400px>
+
                         Your browser does not support the HTML5 canvas tag.
                     </canvas>
 
-                    <div class="txts-list">
-                        <!-- js render -->
-                    </div>
+
                 </div>
 
 
@@ -54,11 +60,7 @@
         </div>
     </main>
 
-    <footer>
-        <div class="container">
-
-        </div>
-    </footer>
+    
     <script src="images.js"></script>
     <script src="meme.js"></script>
 </body>

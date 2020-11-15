@@ -7,7 +7,7 @@ var gImgObj;
 function createGmeme(imgId) {
     return {
         selectedImgId: imgId,
-        txts: [createTxt('힘내라 애들아~ 화이팅!', 80, 70)]
+        txts: [createTxt('힘내라 애들아~ 화이팅!', 200, 70)]
     };
 }
 
@@ -15,8 +15,8 @@ function createTxt(line, x, y) {
     return {
         //object txt = {property:value}
         line: line,
-        size: 22,
-        align: 'left',
+        size: 20,
+        align: 'center',
         color: '#000000', // in color picker, if choosing color from platte notice it stays "solid".
         fontFamily: 'Nanum Gothic',
         x: x,
@@ -25,11 +25,12 @@ function createTxt(line, x, y) {
 }
 
 function initMemeEditor(imgId) {
-    toggleView();
     gMeme = createGmeme(imgId);
     initCanvas();
     renderTxtsEditor();
+    toggleView();
 }
+
 
 function initCanvas() {
 
@@ -42,7 +43,7 @@ function initCanvas() {
     gImgObj.onload = function () {
         canvas.width = gImgObj.width;
         canvas.height = gImgObj.height;
-        gMeme.txts[0].y = gImgObj.height - 301;
+        gMeme.txts[0].y = gImgObj.height - 303;
 
         drawCanvas();
     };
@@ -128,7 +129,10 @@ function renderTxtsEditor() {
         <div class="txt-editor">
 
                     <p>
-                    <input type="text" data-property="line" maxlength="11" placeholder="${txt.line}" oninput="editTxt(this,${idx})">
+                    <input type="text" data-property="line" maxlength="14" min-height:'20px' placeholder="${txt.line}" oninput="editTxt(this,${idx})">
+                    </p>
+                    <p id='maxle'>
+                    Max length=18
                     </p>
 
                 </div>
